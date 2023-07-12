@@ -9,5 +9,12 @@ def misis(track: str, snils: str):
 
     for i in abit:
         if snils in i.text:
-            return(f'Ваше место: {abit[abit.index(i)-2].text}\nСнилс: {i.text}\nОбщая сумма баллов: {abit[abit.index(i)+2].text}\nСумма баллов по предметам: {abit[abit.index(i)+3].text}\nБаллы ИД: {abit[abit.index(i)+7].text}\nУсловие приема: {abit[abit.index(i)+9].text}')
-    
+            place = abit[abit.index(i)-2].text
+            snils = i.text
+            overall = abit[abit.index(i)+2].text
+            ege_res = abit[abit.index(i)+3].text
+            id_res = abit[abit.index(i)+7]
+            status = abit[abit.index(i)+9].text
+            return {'place': place, 'snils': snils, 'overall': overall, 'ege_res': ege_res, 'id_res': id_res, 'status': status}
+
+# print(misis('01.03.04', '182-693-080 95'))
