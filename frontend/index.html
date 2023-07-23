@@ -3,103 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Abiturient monitor</title>
-    <style>
 
-        .center {
-            text-align: center;
-        }
+    <link rel="stylesheet" href="style.css">
 
-        .custom-button {
-              background-color: blue;
-              color: white;
-              padding: 10px 20px;
-              border: none;
-              border-radius: 5px;
-            }
-
-        .container > * {
-  margin-right: 5%;
-}
-
-.container > *:last-child {
-  margin-right: 0;
-}
-
-
-        h1 {
-            margin-bottom: 20px;
-        }
-
-        .suggestions-container {
-            margin-left: 5%;
-            margin-right: 0px;
-            position: relative;
-            display: inline-block;
-        }
-
-        #inputField {
-            padding-right: 30px;
-        }
-
-        .suggestions-list {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            max-height: 200px;
-            overflow-y: auto;
-            border: 1px solid #ccc;
-            border-top: none;
-            background-color: #fff;
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .suggestions-list li {
-            padding: 5px;
-            cursor: pointer;
-        }
-
-        .suggestions-list li:hover {
-            background-color: #f4f4f4;
-        }
-    </style>
     <script>
 
-        let suggestions = ['МИСИС ', 'Banana', 'Cherry', 'Durian', 'Elderberry', 'Fig'];
 
-        window.addEventListener('DOMContentLoaded', () => {
-            const inputField = document.getElementById('inputField');
-            const suggestionsContainer = document.querySelector('.suggestions-container');
-            const suggestionsList = document.getElementById('suggestionsList');
-
-
-            inputField.addEventListener('input', (event) => {
-                const inputText = event.target.value.toLowerCase();
-                const filteredSuggestions = suggestions.filter(suggestion =>
-                    suggestion.toLowerCase().includes(inputText)
-                );
-
-                suggestionsList.innerHTML = '';
-
-                filteredSuggestions.forEach(suggestion => {
-                    const listItem = document.createElement('li');
-                    listItem.textContent = suggestion;
-                    listItem.addEventListener('click', (event) => {
-                        inputField.value = event.target.textContent;
-                    });
-                    suggestionsList.appendChild(listItem);
-                });
-            });
-
-            document.addEventListener('click', (event) => {
-                if (event.target !== inputField) {
-                    suggestionsList.innerHTML = '';
-                }
-
-            });
-        });
     </script>
 </head>
 <body>
@@ -107,11 +16,13 @@
         <h1>Abiturient Monitor</h1>
     </div>
     <div class="container">
+        <input id="inputSnils" type="text" placeholder="Введите ваш СНИЛС">
         <div class="suggestions-container">
-            <input id="inputField" type="text" placeholder="Начните вводить для подсказок">
+            <input id="inputField" type="text" placeholder="Выберите ВУЗ">
             <ul id="suggestionsList" class="suggestions-list"></ul>
         </div>
-        <button class="custom-button">Find!</button>
     </div>
+
+<script src="script.js"></script>
 </body>
 </html>

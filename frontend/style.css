@@ -1,0 +1,77 @@
+        .center {
+            text-align: center;
+        }
+
+        .container {
+            display: inline;
+            position: relative;
+        }
+
+        .container > * {
+            margin-right: 1%;
+        }
+
+        .container > *:last-child {
+            margin-right: 0;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #337ab7;
+            color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #23527c;
+        }
+
+        select {
+            width: 13%;
+        }
+
+        .suggestions-container {
+            position: relative;
+            display: inline;
+        }
+
+        .suggestions-container > * {
+            margin-right: 5px;
+        }
+
+        .suggestions-container > *:last-child {
+            margin-right: 0;
+        }
+
+        #inputField {
+            padding-right: 30px;
+        }
+
+        .suggestions-list {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            border-top: none;
+            background-color: #fff;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .suggestions-list li {
+            padding: 1px;
+            cursor: pointer;
+        }
+
+        .suggestions-list li:hover {
+            background-color: #f4f4f4;
+        }
