@@ -27,6 +27,12 @@
             transition: background-color 0.3s ease;
         }
 
+        .clear-search-button {
+            background-color: #444;
+            color: #fff;
+            font-size: 12px;
+        }
+
         button:hover {
             background-color: #23527c;
         }
